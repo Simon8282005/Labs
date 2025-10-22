@@ -10,7 +10,17 @@
 
     <!-- Body part of the website -->
     <body>
-        <!-- Diplay detials of myself including name and hobbies-->
+        <!-- Use to put all content in the center -->
+        <style>
+            .content {
+                text-align: left;
+                align-items: center;
+                background-color: lightblue;
+            }
+        </style>
+
+        <div class="content">
+            <!-- Diplay detials of myself including name and hobbies-->
         <h1>My name is Chong Yu A.K.A Simon</h1>
         <p>I like to <b>sleep</b> and want to <strong>lay down</strong> fore <i>entire</i> day....</p>
 
@@ -45,6 +55,7 @@
                 width: 300px;
                 height: 300px;
                 overflow: hidden;
+                align-self: center;
             }
 
             .crop_box img {
@@ -52,6 +63,7 @@
                 height: auto;
                 object-fit: cover;
                 object-position: center;
+                align-self: center;
             }
         </style>
 
@@ -63,6 +75,7 @@
         <h4>Potrait of my own</h4>
         <div class="crop_box">
             <img src="potrait.jpg" alt="Cropped Image">
+        </div>
         </div>
     </body>
     <footer>
