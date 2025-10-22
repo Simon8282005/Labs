@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <!-- Setting up the header part of this webpage as dynamic webpage that will scale
+     follow the user screen's size -->
+    <meta charset="utf-8">
+    <meta viewport="width=device-width, initial-scale=1">
+
+    <!-- Title of the webpage -->
+    <title>Welcome to my first lab</title>
+
+    <!-- Body part of the website -->
+    <body>
+        <!-- Diplay detials of myself including name and hobbies-->
+        <h1>My name is Chong Yu A.K.A Simon</h1>
+        <p>I like to <b>sleep</b> and want to <strong>lay down</strong> fore <i>entire</i> day....</p>
+
+        <!-- Display in ordered list -->
+        <h2> Favourite Movies and Books </h2>
+        <ol>
+            <li> Harry Potter <b>(Movies)</b> </li>
+            <li> Three Body <b>(Book)</b> </li>
+            <li> Sherlock Hormes <b>(Movies & Book)</b> </li>
+        </ol>
+
+        <!-- Display in unordered list -->
+        <h2> My hobbies is... </h2>
+        <ul>
+            <li>Sleep</li>
+            <li>Playing videos games</li>
+            <li>Watching Movies</li>
+        </ul>
+
+        <!-- Github link that link to my personal github page -->
+        <h2> My github link </h2>
+        <ul>
+            <li><a href="https://github.com/Simon8282005">Github Link</a></li>
+        </ul>
+        
+        <!-- Diplay my own picture allongside with the favourite book cover -->
+        <h2>Potrait</h2>
+
+        <!-- CSS code use to crop potrait picture -->
+        <style>
+            .crop_box {
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+            }
+
+            .crop_box img {
+                width: 200px;
+                height: auto;
+                object-fit: cover;
+                object-position: center;
+            }
+        </style>
+
+        <h4>Cover of three body series</h4>
+        <div class="crop_box">
+            <img src="three_body.jpeg" alt="Cropped Image">
+        </div>
+        
+        <h4>Potrait of my own</h4>
+        <div class="crop_box">
+            <img src="potrait.jpg" alt="Cropped Image">
+        </div>
+    </body>
+    <footer>
+        <p><i>Thanks for viewing. Creating using HTML5 with VSCode. 22/10/2025</i></p>
+    </footer>
+</head>
