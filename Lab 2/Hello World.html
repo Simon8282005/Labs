@@ -1,0 +1,108 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Lab 2</title>
+    </head>
+    <body>
+        <!-- Table -->
+        <div class="table">
+            <table>  <!-- Add border to the table-->
+                <tr>  <!-- table row -->
+                    <th>Name</th>  <!-- Table header -->
+                    <th>Subject</th>
+                    <th>Grade</th>
+                </tr>
+                <tr> 
+                    <td>Syamil</td>  <!-- Table data -->
+                    <td>CS</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Kishor</td>
+                    <td>Cubersecurity</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Jun Han</td>
+                    <td>Science</td>
+                    <td>A</td>
+                </tr>
+            </table>
+        </div>
+        <!-- Table with border -->
+        <br>
+        <div>
+            <table border="1">
+                <tr>
+                    <th colspan="2">Student Information</th>  
+                </tr>
+                <tr>
+                    <td>Name</td> 
+                    <td>John Doe</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Mathematics A+</td>
+                </tr>
+            </table>
+        </div>
+        <!-- Form -->
+        <!-- Activity 2.4.1 -->
+        <div class="form">
+            <h2>Registration Form</h2>
+            <form action="submit_form.php" method="post">
+                <label for="fname">First Name: </label><br>
+                <input type="text" id="fname" name="firstname"><br><br>
+
+                <label for="lname">Last Name: </label><br>
+                <input type="text" id="lname" name="lastname"><br><br>
+
+                <label for="gender">Gender: </label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Males</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br><br>
+
+                <!-- Value is the text that display inside a button -->
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <!-- Activity 2.4.2 -->
+        <div>
+            <h2>Others details</h2>
+            <form action="submit_form.php" method="post">
+                <label for="hobby">Select your hobbies: </label><br><br>
+                <input type="checkbox" id="hobby1" name="hobby1" value="Reading">
+                <label for="hobby1">Reading</label>
+
+                <input type="checkbox" id="hobby2" name="hobby2" value="Gaming">
+                <label for="hobby2">Gaming</label><br><br>
+
+                <label for="countery">Choose a country: </label>
+                <select name="countery" id="countery">
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                </select><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <br><br>
+        <!-- Activity 2.5.1 -->
+        <!-- Using nav, section, article tag-->
+        <h1>Welcome to My Web Page</h1>
+        <nav>
+            <a href="#home">Home</a> | <a href="#about">About</a> | <a href="#contact">Contact</a>
+        </nav>
+
+        <section>
+            <article>
+                <h2>Article Title</h2>
+                <p>This is an article about web development. </p>
+            </article>
+        </section>
+        <footer>
+            <p>Copyright @ 2025 My Web Page</p>
+        </footer>
+    </body>
+</html>
