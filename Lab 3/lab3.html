@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Interactive Website</h1>
+        <span>Less is more</span>
+        <strong>And less is the most beautiful in the world. </strong>
+    </div>
+    <br>
+    <div class="content">
+        <h2>User Information</h2>
+        <form oninput="output.value = satisfaction.value">
+            User Contact(Email): <input type="email" name="email" id="email" required><br><br>
+            Preferred contact date: <input type="date" name="date" id="date"><br><br>
+            <label for="satisfaction">User satisfaction level: </label>
+            <input id="satisfaction" id="satisfaction" type="range" min="0" max="100" step="1" value="0">
+            <output name="output" for="satisfaction">0</output>
+            
+            <br><br><input type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    <h2>Calculator</h2>
+    <div class="calculator">
+        <form oninput="z.value = parseInt(x.value) + parseInt(y.value)">
+            Number 1: <input type="number" name="x" id="x"><br><br>
+            Number 2: <input type="number" name="y" id="y"><br><br>
+            <output name="z" for="x y"placeholder="output">Value: </output>
+        </form>
+    </div>
+
+    <div class="footer">
+        <br>
+        &copy; 2025 Simon Sdn Bhd.
+    </div>
+</body>
+</html>
