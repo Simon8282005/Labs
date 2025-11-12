@@ -105,7 +105,9 @@ input[type="submit"]:hover {
     outline: 1px;
 }
 
-input[type="select"] {
+input[type="checkbox"] {
+    display: flex;
+    text-align: center;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 5px;
     border: 1px solid #ccc;
