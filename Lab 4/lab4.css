@@ -11,7 +11,6 @@ class can be use repeatly for multiple object.
 /* -------------------- Header ---------------------------*/
 .header {
     text-align: center;
-    text-decoration: blink;
     animation: blink-animation 2s infinite;
     font-family: 'Courier New', Courier, monospace;
 }
