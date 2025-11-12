@@ -1,9 +1,108 @@
+<!-- Define the user web page using css -->
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External css file -->
+    <link rel="stylesheet" href="lab4.css">
+    <!-- Internal css file -->
+    <style>
+        a:link { color: grey; }
+        a:visited { color: darkgray; }
+        a:hover { color:blanchedalmond; }
+        a:active { color: blue;}
+        
+        .web-link {
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 <body>
-    
+    <header class="header">
+        <h2>Welcome to meme page</h2>
+    </header>
+
+    <section id="navigation-section">
+        <!-- Navigation bar -->
+        <nav id="navigation">
+            <ul id="navigation-link">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>      
+    </section>
+
+    <h2 class="header">Video preview</h2>
+
+    <section id="video-section">
+        <video width="300" height="300" controls>
+            <source src="video.mp4" type="video/mp4">
+            Some interesting video
+        </video>
+    </section>
+
+    <h2 class="header">Please fill in your information</h2>
+    <!-- Creating interactive form -->
+    <section id="form-section">
+        <!-- Call javascript to show pop out window -->
+        <form onsubmit="showPopup(); return false; ">
+            <label for="name">Your Name: </label>
+            <input type="text" placeholder="your name please..." required><br><br>
+
+            <label for="email">Your Email: </label>
+            <input type="email" placeholder="your email please..." required><br><br>
+
+            <label for="gender">Your Gender: </label><br>
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" id="male" value="male" required>
+            <label for="gender">Female</label>
+            <input type="radio" name="gender" id="female" value="female" required><br><br>
+
+            <label for="hobbies">Your favorite hobbies</label>
+            <!-- Select need to use alongside with option tag -->
+            <select name="hobbies" id="hobbies">
+                <option value="drawing">Drawing</option>
+                <option value="painting">Painting</option>
+                <option value="photography">Photography</option>
+                <option value="writing">Writing</option>
+                <option value="hiking">Hiking</option>
+                <option value="cycling">Cycling</option>
+                <option value="gardening">Gardening</option>
+                <option value="instrument">Playing an Instrument</option>
+                <option value="dancing">Dancing</option>
+                <option value="reading">Reading</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <!-- Create the pop out window -->
+        <script>
+            function showPopup() {
+                confirm("Did u just click the submit button ?? 🤔")
+                confirm("Did u sure u want to submit ??? 🥲")
+                confirm("Did u really really sure u want to submit ??? 😶‍🌫️")
+                confirm("DID U REALLY SURE U WANT TO SUBMIT ??? 😡")
+                alert("Ok then. But the submit function hvnt done develop yet. 😎")
+                prompt("IT'S A PRANK !! 🤣🤣 (Leave your comments if u like this idea. )")
+            }
+        </script>
+    </section>
+
+    <h2 class="header">Interesting link</h2>
+    <article id="external-link-article">
+        <a class="web-link" href="https://www.memedroid.com/">Memedroid</a>
+        <a class="web-link" href="https://giphy.com/explore/meme-clips">Giphy</a>
+        <a class="web-link" href="https://9gag.com/">9Gag</a>
+        <a class="web-link" href="https://www.nichepursuits.com/websites-for-memes/">Nichepursuits</a>
+        <a class="web-link" href="https://www.media.io/meme-tips/best-meme-sites.html">Media</a>
+    </article>
+
+    <footer id="footer">
+        &copy; Copyright Simon Sdn.Bhd. All rights reserved.
+    </footer>
 </body>
 </html>
