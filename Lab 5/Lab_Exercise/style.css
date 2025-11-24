@@ -1,11 +1,8 @@
-
 /* -------------------- Navigation bar ----------------------------*/
 .navigation_bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin: 10px;
     background-color: f0f0f0;
 }
 
@@ -16,7 +13,6 @@
 nav ul {
     list-style-type: none;
     display: flex;
-    padding-left: 10px;
 }
 
 /* Important for dropdown menu */
@@ -31,25 +27,66 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: purple;
+    color: #6E4A9F;
 }
 
 /* Dropdonw menu */
-.dropdown_content {
-    display: none;
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: block;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #BFA2F2;
-    min-width: 160px;
+    background-color:#F6F0FF
+;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+    /* Making fade out animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);  /* Move down by 10px for move up animation */
+    transition: 
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s;
 }
 
-.dropdown_content li a {
-    padding: 10px;
-    color: white;
-}
-
-.dropdown:hover .dropdown_content {
+.dropdown-content a {
+    color: #685B84;
+    padding: 12px 12px;
+    text-decoration: none;
     display: block;
 }
 
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px); 
+}
+
+.dropdown-content a:hover {
+    background-color:#B573E8;
+}
+
+/* Underline sliding animation */
+/* Create the underline animation using ::after */
+.dropdown > a::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: -10px;
+    width: 0%;
+    height: 4px;
+    background-color: #4B1F73;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover underline animation */
+.dropdown > a:hover::after {
+    width: 80%;
+}

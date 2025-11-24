@@ -1,13 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <video src="video.mp4" width="300" height="300" type="video/mp4" controls>
-        Interesting videos
-    </video>
-</body>
-</html>
+Start
+Input choice
+Validate
+Add points
+Display level
+End
+
+ALGORITHM
+
+STEP 1: Start
+STEP 2: Set totalPoints = 0
+STEP 3: Display menu:
+        1. Add Points
+        2. Check Level
+        3. Exit
+STEP 4: Input choice
+STEP 5: If choice is not a number
+           Display error
+           Go to STEP 3
+        Endif
+STEP 6: If choice = 1 then
+           Input pointsToAdd
+           If pointsToAdd < 0 then
+                Display error
+           Else
+                totalPoints = totalPoints + pointsToAdd
+           Endif
+           Go to STEP 3
+        Endif
+STEP 7: If choice = 2 then
+           If totalPoints >= 500  Level = Master
+           Else if totalPoints >= 200 Level = Expert
+           Else if totalPoints >= 100 Level = Advanced
+	   Else if totalPoints >= 50 Level = Intermediate
+           Display totalPoints and Level
+           Go to STEP 3
+        Endif
+STEP 8: If choice = 3 then
+           Display exit message
+           End program
+STEP 9: Else
+           Display invalid choice
+           Go to STEP 3
+STEP 10: End

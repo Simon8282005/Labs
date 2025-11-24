@@ -1,1 +1,45 @@
 /* CSS file for the footer page */
+footer {
+    display: flex;
+    background-color: #6f427e;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    color: white;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 10px;
+}
+
+.footer-div a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-div a:hover {
+    color: lightgrey;
+}
+
+/* Adding the social media icon */
+.icons-div {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 10px;
+}
+
+.icons-div img {
+    padding-left: 20px;
+}
+
+.icons-div img:hover {
+    color: lightgrey;
+    cursor: pointer;
+}
