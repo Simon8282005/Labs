@@ -1,45 +1,119 @@
 /* CSS file for the footer page */
 footer {
-    display: flex;
-    background-color: #6f427e;
-    font-size: 12px;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
 
-.footer-text {
+/* footer portal */
+.footer-portal h3 {
     color: white;
 }
 
-.footer-div {
+.footer-portal {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 20px 20px;
+    background-color: #492F7B;
+}
+
+.footer-portal i {
+    color: #D3C7E0;
+}
+
+.footer-portal li {
+    list-style: none;
+    padding: 0px 0px 20px 0px;  /* top right bottom left*/
+}
+
+.footer-portal a {
+    text-decoration: none;
+    color: #D3C7E0;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-portal li:hover i {
+    color: #b1a8bb;
+}
+
+.footer-portal a:hover {
+    color: #b1a8bb;
+}
+
+/* creaint underline animation */
+/* need to set the position for the parents class to relative */
+.footer-portal a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0px;
+    width: 0%;
+    height: 2px;
+    background-color: #b1a8bb;
+    transition: width 0.2s ease-in-out;
+}
+
+.footer-portal a:hover::after {
+    width: 80%;
+}
+
+.footer-portal p {
+    color: #D3C7E0;
+}
+
+/* footer center image */
+.footer-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.footer-image img {
+    vertical-align: middle;
+    width: 80%;
+}
+
+.footer-end-elements .footer-links .footer-text {
+    font-size: 12px;
+    color: white;
+}
+
+.footer-end-elements { 
+    display: flex;
+    justify-content: space-between;
+    background-color: #6f427e;
+}
+
+.footer-end-elements .footer-links {
     display: flex;
     justify-content: left;
     align-items: center;
     margin: 10px;
+    font-size: 12px;
 }
 
-.footer-div a {
+.footer-end-elements .footer-links a {
     color: white;
     text-decoration: none;
 }
 
-.footer-div a:hover {
+.footer-end-elements .footer-links a:hover {
     color: lightgrey;
 }
 
 /* Adding the social media icon */
-.icons-div {
+.footer-end-elements .icons-div {
     display: flex;
     justify-content: right;
     align-items: center;
     margin: 10px;
 }
 
-.icons-div img {
+.footer-end-elements .icons-div img {
     padding-left: 20px;
 }
 
-.icons-div img:hover {
+.footer-end-elements .icons-div img:hover {
     color: lightgrey;
     cursor: pointer;
 }
