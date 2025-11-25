@@ -1,3 +1,14 @@
+/* --------------------- Load Fonts Face ------------------------- */
+@font-face {
+    font-family: 'Titkok Heading';  /* For heading */
+    src: url("fonts/TikTokDisplayFont-Bold.woff2");
+}
+
+@font-face {
+    font-family: 'Titkok Font';  /* For display content */
+    src: url("fonts/TikTokDisplayFont-Bold.woff2");
+}
+
 /* -------------------- Navigation bar ----------------------------*/
 .navigation_bar {
     display: flex;
@@ -13,6 +24,7 @@
 nav ul {
     list-style-type: none;
     display: flex;
+    padding: 5px;
 }
 
 /* Important for dropdown menu */
@@ -26,8 +38,18 @@ nav ul li a {
     color: #4B1F73;
 }
 
-nav ul li a:hover {
+nav ul li a:hover ul {
     color: #6E4A9F;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+nav ul li a:hover .arrow {
+    transform: rotateZ(90deg)
 }
 
 /* Dropdonw menu */
@@ -72,6 +94,34 @@ nav ul li a:hover {
     background-color:#D3C7E0;
 }
 
+/* create a inner dropdown menu insdie the dropdown menu */
+.dropdown-inner {
+    position: relative;
+    display: inline-block;
+    transform: translateY(20px), translateX(60px);
+}
+
+.dropdown-content-inner {
+    display: block;
+    position: absolute;
+    background-color:#F6F0FF;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: 
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s;
+}
+
+.dropdown-inner:hover .dropdown-content-inner {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px); 
+}
+
 /* Underline sliding animation */
 /* Create the underline animation using ::after */
 .dropdown > a::after {
@@ -88,4 +138,31 @@ nav ul li a:hover {
 /* Hover underline animation */
 .dropdown > a:hover::after {
     width: 80%;
+}
+
+/* --------------- Image slider ------------------- */
+.slider {
+    display: block;
+    width: 1500px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slides {
+    display: flex;
+    width: 4500px;
+    animation: slide 9s infinite;
+}
+
+.slides img {
+    width: 1500px;
+    height: auto;
+}
+
+@keyframes slide {
+    0%, 30%   { transform: translateX(0px); }
+    33%, 63% { transform: translateX(-1500px); }
+    66%, 96%  { transform: translateX(-3000px); }
+    100% { transform: translateX(0px); }
 }

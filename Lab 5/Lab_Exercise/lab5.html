@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- JavaScript will run before the HTML file got create without defer -->
+    <script src="script.js" defer></script>
     <title>UMT Cita Warisan</title>
 </head>
 <body>
     <!-- Creating the navigation bar -->
     <header class="navigation_bar">
         <div class="logo">
-            <img src="umt logo and name.png" alt="log umt">
+            <img src="images/umt logo and name.png" alt="log umt">
         </div>
     
         <nav>
             <ul>
                 <li class="dropdown">
-                    <a href="#study">About UMT</a>
+                    <a href="#study">About UMT <span class="arrow">►</span></a>
                     <ul class="dropdown-content">
-                        <a href="#stemfoundationdiploma">Vision & Mission</a>
-                        <a href="#bachelor">History of UMT</a>
-                        <a href="#masteranddoctorate">Logo & Corporate Image Guidelines</a>
-                        <a href="#masteranddoctorate">Organization Chart</a>
+                        <a href="https://www.umt.edu.my/vmfo-2/">Vision & Mission</a>
+                        <a href="https://www.umt.edu.my/sejarah/">History of UMT</a>
+                        <a href="https://www.umt.edu.my/logo/">Logo & Corporate Image Guidelines</a>
+                        <a href="https://www.umt.edu.my/carta/">Organization Chart</a>
                         <a href="#masteranddoctorate">University Governance</a>
                         <a href="#masteranddoctorate">Departments</a>
                         <a href="#masteranddoctorate">Media Center</a>
@@ -34,18 +36,62 @@
                 </li>
                 <!-- Drop down menu -->
                 <li class="dropdown">
-                    <a href="#study">Study ▼</a>
+                    <a href="#study">Study <span class="arrow">►</span></a>
                     <ul class="dropdown-content">
-                        <a href="#stemfoundationdiploma">STEM Foundation & Diploma</a>
-                        <a href="#bachelor">Bachelor</a>
-                        <a href="#masteranddoctorate">Master & Doctorate</a>
+                        <a href="https://www.umt.edu.my/stem-foundation-diploma/">STEM Foundation & Diploma</a>
+                        <a href="https://www.umt.edu.my/diploma-bachelor-study/">Bachelor</a>
+                        <a href="https://postgrad.umt.edu.my/postgraduate_programme-2/">Master & Doctorate</a>
                     </ul>
                 </li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#about">About UMT</a></li>
+                <li class="dropdown">
+                    <a href="#research">Research <span class="arrow">►</span></a>
+                    <ul class="dropdown-content">
+                        <a href="https://www.umt.edu.my/umt-wise">UMT Wise</a>
+                        <a href="https://inos.umt.edu.my/">- Institute of Oceanography and Environment (INOS)</a>
+                        <a href="https://akuatrop.umt.edu.my/">- Institute of Tropical Aquaculture & Fisheries (AKUATROP)</a>
+                        <a href="#stemfoundationdiploma">- Institute of Climate Adaptation and Marine Biotechnology (ICAMB)</a>
+                        <a href="https://imb.umt.edu.my/">Institute of Tropical Biodiversity and Sustainable Development (IBTPL)</a>
+                        <a href="https://ibtpl.umt.edu.my/">Centre of Research Field Service (CRAFT)</a>
+                        <a href="https://icc.umt.edu.my/">- Innovation and Commercialization Centre (ICC)</a>
+                        <a href="https://ppp.umt.edu.my/">Office of Research Management (RMO)</a>
+                        <a href="https://penerbit.umt.edu.my/">Publisher</a>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#about">Studnet & Campus Life <span class="arrow">►</span></a>
+                    <ul class="dropdown-content">
+                        <a href="https://www.umt.edu.my/umt-wise" class="dropdown-inner-menu">Academic Calendar&nbsp;<span class="arrow">►</span></a>
+                        <a href="https://www.umt.edu.my/umt-wise">International Student</a>
+                        <a href="https://www.umt.edu.my/umt-wise">Check Application Status</a>
+                        <a href="https://www.umt.edu.my/umt-wise">Scholarship & Financial<br>Assistance</a>
+                        <a href="https://www.umt.edu.my/umt-wise">Student Support</a>
+                        <a href="https://www.umt.edu.my/umt-wise">Academic Procedures & Regulations</a>
+                        <a href="https://www.umt.edu.my/umt-wise">Universities & University<br>Colleges Act</a>
+                    </ul>
+                </li>
+                <!-- Creating inner dropwodnw menu for academic calendar -->
+                <li class="dropdown-inner">
+                    <ul class="dropdown-content-inner">
+                        <a href="">FOUNDATION & DIPLOMA SEMESTER 1 2025/2026</a>
+                        <a href="">FOUNDATION & DIPLOMA SEMESTER 2 2025/2026</a>
+                        <a href="">BACHELOR SEMESTER 1 2025/2026</a>
+                        <a href="">BACHELOR SEMESTER 2 2025/2026</a>
+                        <a href="">FOUNDATION & DIPLOMA SHORT SEMESTER 2025/2026</a>
+                        <a href="">BACHELOR SHORT SEMESTER 2025/2026</a>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <!-- Image slider -->
+    <div class="slider">
+        <div class="slides">
+            <img src="images/Slider-1.webp" alt="Slider-1">
+            <img src="images/Slider-2.webp" alt="Slider-2">
+            <img src="images/Slider-3-eng.webp" alt="Slider-3">
+        </div>
+    </div>
 </body>
 <!-- Link with the footer css -->
 <footer>
@@ -162,7 +208,7 @@
     </div>
     <!-- Footer image -->
     <div class="footer-image">
-        <img src="footer_image.png" alt="footer picture">
+        <img src="images/footer_image.png" alt="footer picture">
     </div>
 
     <!-- Footer links and media icons -->
@@ -186,7 +232,5 @@
             <a href="https://www.umt.edu.my/umt-contact-directory/"><img src="icons/phone.png" alt="phone" title="Contact Page UMT"></a>
         </div>
     </div>
-    <!-- Adding footer link -->
-    
 </footer>
 </html>
