@@ -29,14 +29,12 @@ footer {
     color: #D3C7E0;
     position: relative;
     display: inline-block;
-}
-
-.footer-portal li:hover i {
-    color: #b1a8bb;
+    font-family: 'Tiktok Font', sans-serif;
 }
 
 .footer-portal a:hover {
     color: #b1a8bb;
+    font-family: 'Tiktok Font', sans-serif;
 }
 
 /* creaint underline animation */
