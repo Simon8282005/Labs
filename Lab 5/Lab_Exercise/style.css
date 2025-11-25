@@ -189,3 +189,108 @@ nav ul li a:hover .arrow {
     66%, 96%  { transform: translateX(-3000px); }
     100% { transform: translateX(0px); }
 }
+
+/* ----------------- Admission --------------------*/
+.admission {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+
+.admission .first-box {
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 300px;
+    background-image: url("images/asasi.jpeg");
+    background-size: cover;
+    border-radius: 10px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.admission .second-box {
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 300px;
+    background-image: url("images/asasi.jpeg");
+    background-size: cover;
+    border-radius: 10px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.admission .third-box {
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 300px;
+    background-image: url("images/asasi.jpeg");
+    background-size: cover;
+    border-radius: 10px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+/* Darak overlay */
+.admission .first-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.admission .second-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.admission .third-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.admission p {
+    position: absolute;
+    align-self: center;
+    color: white;
+    font-family: 'Tiktok Font', sans-serif;
+    font-size: 32px;
+    z-index: 2;
+    transform: translateY(-60px);
+}
+
+.admission button {
+    position: absolute;
+    z-index: 2;
+    margin-top: 40px;
+    background: #6b3de1;
+    border-radius: 10px;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    transform: translateY(160px);
+}
