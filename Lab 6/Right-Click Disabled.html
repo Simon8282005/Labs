@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta lang="en">
+        <meta name="viewport" content="width=device-width">
+        <title>Disable Right-Click</title>
+        <script>
+            // JavaScript to disable right - click
+            document.addEventListener("contextmenu", 
+            function(event) {
+                alert("Right-click is disabled on this page. ");
+                event.preventDefault();
+            })
+        </script>
+    </head>
+    <body>
+        <h2>Right-Click Disabled</h2>
+        <p>Try right-clicking anywhere on this page.</p>
+    </body>
+</html>

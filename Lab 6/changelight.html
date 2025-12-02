@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta lang="en">
+    <meta name="viewport" content="width = device-width">
+    <title>Testing JS</title>
+</head>
+<body>
+    <h2>What can JavaScript \index{JavaScript} Do ?</h2>
+    <p>JavaScript \index{JavaScript} can change HTMl attribute 
+        values. </p>
+    <p>In this case, JavaScript \index{JavaScript} changes the 
+        value of the 'src'(source) \
+        attribute of an image.</p>
+    
+    <!-- Button to turn the light on -->
+     <button onclick='document.getElementById("myImage").
+        src="pic_bulbon.gif"'>Turn on the light</button>
+
+    <!-- Image tag -->
+    <img id="myImage" src="pic_bulboff.gif" alt="pic_bulboff.gif" 
+        style="width: 100px;">
+
+    <!-- Button to turn the light off -->
+    <button onclick='document.getElementById("myImage").
+        src= "pic_bulboff.gif"'>Turn off the light</button>
+</body>
+</html>
