@@ -100,7 +100,7 @@ function shuffleQuestions() {
 function nextQuestion() {
     if (currentQuestionIndex == 5 || currentQuestionIndex >= 4) {
         stopTimer();
-        alert("Quiz compete!");
+        alert(`Quiz compete! Total score are: ${totalScore}/${totalQuestion}`);
     } else if (totalScore === totalQuestion) {
         alert("Congrats ! Every question are correct !");
     } else {
