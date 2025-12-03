@@ -27,28 +27,43 @@ const quiz = [
     }
 ]
 
+// Global variable
 let currentQuestionIndex = 0;
 let score = 0;
 let totalQuestion = quiz.length;
+let totalScore = 0;
 
 // HTML component
 let feedbackLabel = null;
+let timerText = null;
+let scoreText = null;
+
+// JavaScript component
+let timer = null;
 
 // initialize function
 // loading while all html structure done loading
 document.addEventListener('DOMContentLoaded', function() {
-    initializeQuiz();
+    startQuiz();
 });
 
-function initializeQuiz() {
+function startQuiz() {
     feedbackLabel = document.getElementById("feedback");
     feedbackLabel.innerText = "Start answering the quiz to see the feedback..";
+
+    timerText = document.getElementById("time");
+
+    scoreText = document.getElementById("score");
+    scoreText.innerText = "0";
 
     shuffleQuestions();
     displayQuestions();
 }
 
 function displayQuestions() {
+    // Start the timer
+    startTimer(10);
+
     // load the question from the list and generate the option
     const currentQuestion = quiz[currentQuestionIndex];
     document.getElementById("question").innerText = currentQuestion.question;
@@ -84,10 +99,13 @@ function shuffleQuestions() {
 // load next question
 function nextQuestion() {
     if (currentQuestionIndex == 5 || currentQuestionIndex >= 4) {
+        stopTimer();
         alert("Quiz compete!");
+    } else if (totalScore === totalQuestion) {
+        alert("Congrats ! Every question are correct !");
     } else {
         currentQuestionIndex++;
-        displayQuestions();
+        displayQuestions();  
     }
 }
 
@@ -101,10 +119,35 @@ function checkAnswer() {
     if (userAnswer) {
         if (userAnswer.value === quiz[currentQuestionIndex].answer) {
             feedbackLabel.innerText = "Congrats! Correct Answer!";
+            totalScore++;
+            scoreText.innerText = totalScore;
             nextQuestion();
         } else {
             feedbackLabel.innerText = "Unforunally, it is not the correct ansewr.";
             nextQuestion();
         }
     }
+}
+
+// TODO: change the text of the total score
+
+function startTimer(duration) {
+    let count = duration;
+
+    stopTimer();
+
+    timer = setInterval(function() {
+        count--;
+        timerText.innerText = count;
+
+        if (count <= 0) {
+            clearInterval(timer);
+            timerText.innerText = "10";
+            feedbackLabel.innerHTML = "Time is out. Go to next question.";
+        }
+    }, 1000);  // 1000 miliseconds = 1 sec
+}
+
+function stopTimer() {
+    if (timer != null) { clearInterval(timer); timerText.innerText = "10"; }
 }
