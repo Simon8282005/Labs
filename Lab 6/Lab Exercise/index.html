@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en">
+    <meta name="viewport" content="width=device-width">
+    <title>Quiz Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>This is a very simple games</header>
+    <!-- create a box that wrap all the element -->
+    <div class="container">
+        <!-- Section for the questions, answer options, and time -->
+        <section class="quiz">
+            <label name="question" id="question">First Question</label>
+            
+            <section class="options" id="options"></section>
+        </section>
+
+        <!-- Section to show feedback (correct / incorrect) after anwer -->
+        <section class="feedback">
+            <h2 id="feedback">Status here</h2>
+            <!-- Button to submit the answer -->
+            <button type="submit" onclick="checkAnswer()">Submit Answer</button>
+
+            <!-- Timer area -->
+            <p>Time remaining: </p>
+            <p class="time">0</p>
+        </section>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+<!-- Display the user score after the quiz -->
+<footer>
+    <p>Total score: </p>
+</footer>
+</html>

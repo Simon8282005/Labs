@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: local("Fonts/MinecraftTen-VGORe.ttf") format("truetype")
+}
+
+body {
+    justify-content: center;
+    margin: 10px;
+}
+
+header {
+    text-align: center;
+    font-family: 'Minecraft';
+    font-size: 22px;
+}
+
+h2 {
+    font-family: 'Minecraft';
+}
+
+p {
+    font-family: 'Minecraft';
+}
+
+button {
+    margin: 10px 0px 0px 10px;
+    padding: 10px 10px;
+    background-color: #70B237;
+    color: white;
+    font-family: 'Minecraft';
+}
+
+button:hover {
+    background-color: #5c912e;
+    color: lightgrey;
+    cursor:grab;
+}
+
+.container {
+    display: block;
+    justify-content: center;
+    position: relative;
+    width: 90vw;  /* vw stand for viewport width */
+    height: 80vh;  /* vh stand for viewport height */
+    border-radius: 10px;
+    border-style: dotted;
+}
+
+.container .quiz {
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Minecraft';
+}
+
+.container .options {
+    padding: 10px;
+}
+
+.container .feedback {
+    text-align: center;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Minecraft';
+}
