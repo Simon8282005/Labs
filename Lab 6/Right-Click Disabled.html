@@ -5,9 +5,12 @@
         <title>Disable Right-Click</title>
         <script>
             // JavaScript to disable right - click
+            // context menu listener will be trigger when user attempt
+            // to open right click menu
             document.addEventListener("contextmenu", 
             function(event) {
                 alert("Right-click is disabled on this page. ");
+                // preventDefault prevent broswer default menu to open
                 event.preventDefault();
             })
         </script>
