@@ -62,6 +62,7 @@ This lab focuses on building a dynamic, interactive Quiz Game using **HTML**, **
     * **Solution:** Implemented a global variable to track the timer ID and explicitly cleared the previous interval before starting a new one.
 * **Challenge:** Getting the value of a radio button by ID returned the wrong value.
     * **Solution:** Switched to selecting the *checked* input from the named group (`input[name="answer"]:checked`).
+* **Challenge:** `"${option}"` need to wrap by two "", if missing, the old sentence data will break. For example, The End will only read as The and the End are missing.
 
 ## 📚 Technologies Used
 * HTML5

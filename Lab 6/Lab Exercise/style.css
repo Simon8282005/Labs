@@ -6,6 +6,7 @@
 body {
     justify-content: center;
     margin: 10px;
+    background-color: #F0F2F5;
 }
 
 header {
@@ -41,8 +42,8 @@ button:hover {
     display: block;
     justify-content: center;
     position: relative;
-    width: 90vw;  /* vw stand for viewport width */
-    height: 60vh;  /* vh stand for viewport height */
+    width: 95vw;  /* vw stand for viewport width */
+    height: 70vh;  /* vh stand for viewport height */
     border-radius: 10px;
     border-style: dotted;
 }
@@ -63,9 +64,52 @@ button:hover {
     margin: 10px;
 }
 
+.quiz {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------- Customize the option list as a card style ------------------*/
+/* force the section display all child follow the column */
+.answer {
+    display: none;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options-card {
+    justify-content: center;
+    background-color: #FFFFFF;
+    padding: 10px 5px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: background-color 0.2s ease, border 0.2s ease;  /* changing the border and color smoothly*/
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.options-card:hover {
+    background-color: #F4F7FF;
+    border-color: #C8D6F9;
+}
+
+.options-card:has(input:checked) {
+    border-color: #C8D6F9;
+}
+
+.options input[type="radio"] {
+    list-style: none;
+}
+
 footer {
     text-align: center;
     font-family: 'Minecraft';
-    width: 90vw;
+    width: 95vw;
     height: 70vh;
 }

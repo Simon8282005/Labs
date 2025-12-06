@@ -75,7 +75,11 @@ function displayQuestions() {
     // loop every elemnent insite options to create radio button
     currentQuestion.options.forEach ( option => {
         const label = document.createElement('label');
-        label.innerHTML = `<input type="radio" name="answer" id="answer" value="${option}">${option}`;
+        //label.innerHTML = `<input type="radio" name="answer" id="answer" value="${option}">${option}`;
+        label.innerHTML = `
+        <label name="options-card" id="options-card" class="options-card">${option}
+            <input type="radio" class="answer" name="answer" id="answer" value="${option}" >
+        </label>`;
         optionContainer.appendChild(label);
     });
 }
@@ -117,6 +121,7 @@ function checkAnswer() {
     let userAnswer = document.querySelector("input[name='answer']:checked");
 
     if (userAnswer) {
+        console.log(`Answer: ${userAnswer.value}`);
         if (userAnswer.value === quiz[currentQuestionIndex].answer) {
             feedbackLabel.innerText = "Congrats! Correct Answer!";
             totalScore++;
