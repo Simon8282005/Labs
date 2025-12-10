@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Minecraft';
-    src: local("Fonts/MinecraftTen-VGORe.ttf") format("truetype")
+    src: local("Fonts/MinecraftTen-VGORe.ttf") format("truetype");
 }
 
 body {
