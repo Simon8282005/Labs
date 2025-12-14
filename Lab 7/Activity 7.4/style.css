@@ -31,14 +31,14 @@ body {
 }
 
 .fade {
-    animation: fadeEffect 8s ease-in;
+    animation: fadeEffect 8s ease-in-out;
 }
 
 @keyframes fadeEffect {
     0% { opacity: 0% ;}
-    30% { opacity: 33%; }
-    50% { opacity: 50%; }
-    70% { opacity: 70%; }
-    90% { opacity: 90%; }
-    100% { opacity: 100%; }
+    30% { opacity: 50%; }
+    50% { opacity: 100%; }
+    70% { opacity: 50%; }
+    90% { opacity: 30%; }
+    100% { opacity: 0%; }
 }
