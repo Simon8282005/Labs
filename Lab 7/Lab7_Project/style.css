@@ -1,0 +1,70 @@
+:root {
+    /* Bakcground color */
+    --bg-main: #F5F5F5;
+    --bg-nav: #E0E0E0;
+    --bg-card: #FFFFFF;
+    --bg-form: rgba(240, 240, 240, 0.95);
+    --bg-shadow: 4px 0px 15px rgba(0, 0, 0, 0.3);
+
+    /* Text color */
+    --text-primary: #333333;
+    --text-secondary: #616161;
+    --text-nav: #4F4F4F;
+    --text-nav-hover: #212121;
+
+    /* Accents & Interactive */
+    --border-light: #BDBDBD;
+    --btn-bg: #757575;
+    --btn-bg-hover: #424242;
+    --progress-fill: #616161;
+}
+
+/* ----------------- Navigation Bar --------------------------*/
+
+nav {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    display: flex;
+    size: 100vw;
+    justify-content: center;
+    box-shadow: var(--bg-shadow)
+}
+
+nav li {
+    list-style: none;
+    padding: 10px 10px 10px 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: grey;
+}
+
+nav li a:hover {
+    color: var(--text-nav-hover);
+}
+
+/* -------------------------- Form area -------------------------- */
+body {
+    background-image: url('images/form-background-image.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-form);
+    padding: 20px;
+    box-shadow: var(--bg-shadow);
+    width: 300px;
+    text-align: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
