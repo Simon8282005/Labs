@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     collapsibleButton.forEach(function(button) {
         button.addEventListener("click", function() {
             const content = this.nextElementSibling;
-            
+
             if (content.style.display === "block") {
                 content.style.display = "none";
             } else {
@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
 
 // Slide show function
 function showSlides() {
