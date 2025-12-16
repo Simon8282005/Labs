@@ -10,6 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 content.style.display = "block";
             }
-        })；
+        });
     });
 });
