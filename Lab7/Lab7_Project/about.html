@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en">
+    <meta name="viewport" content="width = device - width">
+    <link rel="stylesheet" href="style.css">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Home page -->
+    <!-- Navigation bar -->
+    <nav>
+       <li><a href="index.html">Home</a></li> 
+       <li><a href="#blog">Blog</a></li>
+       <li><a href="#about_me">About Me</a></li>
+    </nav>
+    <br>
+    <div class="profile-card">
+        <div class="card-header">
+            <h2>Simon's Profile Card</h2>
+        </div>
+        <img src="images/profile picture.jpg" alt="Profile Picture" class="profile-image">
+        <h3 class="profile-name">Chong Yu</h3>
+        <p class="profille-title">Student C.S.</p>
+        <p class="profile-education">Universiti Malaysia Terengannu</p>
+        <div class="socia-links">
+            <a href="https://www.instagram.com/star010001/" class="social-icon"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/Simon8282005" class="social-icon"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+
+    <br>
+    <!-- Progress Bar -->
+    <div class="progressbar-container">
+        <h2>Skill List</h2>
+        <div class="progress-contianer">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <br>
+        <button class="clear-progress" id="clear-progress">Clear Progress</button>
+        <button class="increase-progress" id="increase-progress">Increase Progress</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Increase progress bar
+            const progressBar = document.getElementById("progress-bar");
+            const progressButton = document.getElementById("increase-progress");
+            const clearProgressButton = document.getElementById("clear-progress");
+
+            let progress = 0;
+
+            progressButton.addEventListener("click", function() {
+                if (progress < 100) {
+                    progress += 10;
+                    progressBar.style.width = progress + "%";
+                } 
+            });
+
+            clearProgressButton.addEventListener("click", function() {
+                if (progress >= 0) {
+                    progress = 0;
+                    progressBar.style.width = progress + "%";
+                }
+            });
+        });
+    </script>
+</body>
+<footer>
+
+</footer>
+</html>

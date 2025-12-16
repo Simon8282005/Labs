@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en">
+    <meta name="viewport" content="width = device - width">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    
+</head>
+<body>
+    <!-- Home page -->
+    <!-- Navigation bar -->
+    <nav>
+       <li><a href="index.html">Home</a></li> 
+       <li><a href="#blog">Blog</a></li>
+       <li><a href="about.html">About Me</a></li>
+    </nav>
+
+    <!-- Side navigation bar -->
+    <div class="side-navigation">
+        <a href="#slideshow-container">Slide Show</a>
+        <a href="#question-container">Q&A</a>
+    </div>
+    
+    <header class="title">
+        <h1>Welcome Simon's Blog</h1>
+        <p><i>Time is flying...regard with what u got right now...</i></p>
+    </header>
+
+    <!-- Image slideshow -->
+    <div class="slideshow-container" id="slideshow-container">
+        <div class="slide fade">
+            <img src="images/slideshow1.jpeg" alt="image1">
+        </div>
+        <div class="slide fade">
+            <img src="images/slideshow2.jpeg" alt="image2">
+        </div>
+        <div class="slide fade">
+            <img src="images/slideshow3.jpg" alt="image3">
+        </div>
+    </div>
+
+    <!-- Q&A section (for collapsible content) -->
+    <div class="question-container" id="question-container">
+        <div class="question">
+            <h2>Q: Who is behind this website?</h2>
+            <button class="collapsible">Read Answer</button>
+            <div class="answer">
+                <p>A: I am a Computer Science student currently studying at UMT. I specialize in database design and web development, with a passion for digital art and minimalism.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Q: What tools did you use to build this site?</h2>
+            <button class="collapsible">Read Answer</button>
+            <div class="answer">
+                <p>A: This site was built from scratch using raw HTML5, CSS3, and JavaScript. I avoided heavy frameworks to ensure the site remains lightweight and fast. The design follows a strict monochromatic Brutalist aesthetic.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Q: Are you open to collaborations?</h2>
+            <button class="collapsible">Read Answer</button>
+            <div class="answer">
+                <p>A: Yes! I am currently looking for opportunities in software development or UI/UX design. You can contact me via the form on the homepage.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<footer>
+
+</footer>
+</html>

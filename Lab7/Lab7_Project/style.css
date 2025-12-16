@@ -1,0 +1,343 @@
+:root {
+    /* Bakcground color */
+    --bg-main: #F5F5F5;
+    --bg-nav: #E0E0E0;
+    --bg-card: #FFFFFF;
+    --bg-form: rgba(240, 240, 240, 0.9);
+    --bg-title: rgba(240, 240, 240, 0.9);
+    --bg-shadow: 4px 0px 15px rgba(0, 0, 0, 1);
+
+    /* Text color */
+    --text-primary: #333333;
+    --text-secondary: #616161;
+    --text-nav: #4F4F4F;
+    --text-nav-hover: #212121;
+
+    /* Accents & Interactive */
+    --border-light: #BDBDBD;
+    --btn-bg: #757575;
+    --btn-bg-hover: #424242;
+    --progress-fill: #616161;
+}
+
+@font-face {
+    font-family: 'Title';
+    src: url('fonts/BRADHITC.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Title Bold';
+    src: url('fonts/segoescb.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Question Content';
+    src: url('fonts/ITCKRIST.TTF') format('truetype');
+}
+
+body {
+    background-image: url('images/form-background-image.jpeg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------- Navigation Bar --------------------------*/
+
+nav {
+    font-family: 'Title Bold';
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    display: flex;
+    size: 100vw;
+    justify-content: center;
+    box-shadow: var(--bg-shadow)
+}
+
+nav li {
+    list-style: none;
+    padding: 10px 10px 10px 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: grey;
+}
+
+nav li a:hover {
+    color: var(--text-nav-hover);
+}
+
+/*  ------------------------ Side navigation bar ---------------- */
+.side-navigation {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 200px;
+    background-color: #333;
+    border-right: 2px solid #ddd;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    width: auto;
+}
+
+.side-navigation a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #444;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 12px;
+    font-family: 'Title Bold';
+    font-weight: bold;
+}
+
+.side-navigation a:hover {
+    background-color: #555;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* -------------------------- Form area -------------------------- */
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-form);
+    padding: 20px;
+    box-shadow: var(--bg-shadow);
+    width: 300px;
+    text-align: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* -------------------- Home page ------------------------------- */
+.title {
+    box-shadow: var(--bg-shadow);
+    background-color: var(--bg-title);
+}
+
+.title h1 {
+    padding: 10px;
+    color: var(--text-primary);
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 10px 10px 15px rgba(255, 255, 255, 0.3);
+    font-family: 'Title Bold', cursive;
+    font-weight: bold;
+}
+
+.title p {
+    padding: 10px;
+    color: var(--text-secondary);
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 10px 10px 15px rgba(255, 255, 255, 0.3);
+    font-family: 'Title', cursive;
+}
+
+/* --------------------- slide show------------------ */
+.slideshow-container {
+    position: relative;
+    max-width: 90vw;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--bg-shadow);
+    margin: 50px auto;
+}
+
+.slide {
+    justify-content: center;
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fade {
+    animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* --------------------------- Q&A Container -------------------------- */
+.question-container {
+    margin: 2px auto;
+    max-width: 90vw;
+    height: auto;
+    color: var(--text-primary);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question {
+    background-color: var(--bg-form);
+    border-radius: 5px;
+}
+
+.question h2 {
+    padding: 10px 0px 10px 10px;
+    font-family: 'Title Bold', cursive;
+    font-weight: bold;
+}
+
+.question .answer p {
+    padding: 10px;
+    color: var(--text-secondary);
+    font-family: 'Question Content';
+}
+
+.answer {
+    animation: slide-down .5s ease-in-out forwards;
+    overflow: hidden;
+    display: none;
+    overflow: hidden;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        max-height: 0px;
+    } to {
+        opacity: 1;
+        max-height: auto;
+    }
+}
+
+.collapsible {
+    margin: 10px;
+    padding: 5px;
+    background-color: var(--btn-bg);
+    border-radius: 5px;
+    color: white;
+}
+
+.collapsible:hover {
+    background-color: var(--btn-bg-hover);
+}
+
+/* --------------------- Profile Card ---------------------- */
+.profile-card {
+    width: auto;
+    background: var(--bg-form);
+    border-radius: 5px;
+    box-shadow: var(--bg-shadow);
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.card-header h2 {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin: 0 0 20px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin: 15px 0 5px;
+}
+
+.profile-title {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.profile-education {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.social-links {
+    margin: 15px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #555;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon {
+    color: var(--btn-bg);
+}
+
+.social-icon i:hover{
+    color: var(--btn-bg-hover);
+}
+
+/* --------------- Progress bar ----------------- */
+.progressbar-container {
+    text-align: center;
+    width: 100%;
+    background: var(--bg-form);
+    padding: 10px 0px 10px 0px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 30px;
+}
+
+.progress-bar {
+    height: 10px;
+    width: 0%;
+    background: var(--progress-fill);
+    border-radius: 20px;
+    transition: width 0.4s ease-in-out;
+}
