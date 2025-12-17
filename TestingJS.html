@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width">
+    <title>Testing JavaScript</title>
+    <!-- 
+    <script>
+        var book = new Object();
+        book.ISBN = '123456798';
+        book.Title = 'JavaScript';
+        book.Author = 'Simon..';
+        book.Publisher = 'HelloWorld COmpany';
+    </script>
+     -->
+    <script>
+        function Student(code, name, type) {
+            this.code = code;
+            this.name = name;
+            this.type = type;
+        }
+    </script>
+</head>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1.5em; color: blue;">
+    <script>
+        // Define for cash customer
+        var student = new Student("S12345", "Simon", "C.S. Student");
+        var student_code = student.code;
+        var student_name = student.name;
+        var student_type = student.type;
+
+        var p = new Object();
+        p['Fuyan'] = "132456798";
+        p['Simon'] = "987654321";
+        p['Lim'] = "521347896";
+
+        var array = new Array(5);
+
+        var student_array = new Array (
+            new Student("S12346", "Simon", "Student"),
+            new Student("S65421", "Fuyan", "Gay"),
+        );
+
+        //document.write("Code: " + student_code + "<br>" + "Name: " + student_name + "<br>" + "Type: " + student_type);
+
+        for (var stu in student) {
+            document.write("Property Name: " + student[stu] + "<br>");
+        }
+
+        let i = 0;
+        document.writeln(i++);  // i = i + 1, but will display first then assign
+        // i = 1
+        document.writeln(++i);  // i + 1 = i, 1 + 1 = i
+
+        for (var people in p) {
+            document.writeln('<br> Person: ' + people + "<br>" + "Number: " + p[people] + "<br>");
+        }
+
+        // 2d array
+        document.writeln(student_array.code);  // will got error
+
+        var n = new Array("<br><br>" + "Simon");
+        var m = new Array("CY")
+        document.writeln(n.concat(m));
+        document.writeln(n.pop());
+    </script>
+</body>
+</html>

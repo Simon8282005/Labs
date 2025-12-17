@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <h2>HelloWorld</h2>
+    <form>
+        <div class="row mb-3">
+            <label for="inputEmail" class="col-sm-2 col-form-label" id="email">Email</label>
+            <div class="col-sm-10">
+                <input type="emial" class="form-control" id="inputEmail">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+    </form><br><br>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Password</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buttonSubmit = document.getElementById("submitButton");
+            buttonSubmit.addEventListener("click", function() {
+                const email = document.getElementById('inputEmail');
+                const password = document.getElementById('inputPassword');
+                    
+                
+            });
+        });
+
+        
+    </script>
+</body>
+</html>
