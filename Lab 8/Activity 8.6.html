@@ -62,5 +62,69 @@
             <option>Option 3</option>
         </select>
     </div>
+
+    <!-- Form Validation -->
+    <h2>Form 8.6.6</h2>
+    <form>
+        <div class="mb-3">
+            <label for="validateExample" class="form-label">Username</label>
+            <input type="text" class="form-control is-valid" id="validationExample" value="Correct Input">
+            <div class="valid-feedback">Looks Good</div>
+        </div>
+        <div class="mb-3">
+            <label for="validateExampleInvalid" class="form-label">Password</label>
+            <input type="password" class="form-control is-valid" id="validateExampleInvalid">
+            <div class="invalid-feedback">Please choose a stronger password. </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form><br><br>
+
+    <!-- Checkboxes and raios -->
+    <h2>Checkboxes and Radios (8.6.7)</h2>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck">
+        <label for="exampleCheck" class="form-check-label">Check me out</label>
+    </div>
+    <div class="form-check">
+        <input type="radio" name="exampleRadios" class="form-check-input" value="optional" id="radio1" checked>
+        <label for="raido1" class="form-check-label">Option 1</label>
+    </div>
+    <div class="form-check">
+        <input type="radio" name="exampleRadios" class="form-check-input" id="raio2" value="option2">
+        <label for="radio2" class="form-check-label">Option 2</label>
+    </div><br><br>
+
+    <!-- Floating Labels 8.6.9 -->
+    <h2>Floating Labels (8.6.9)</h2>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+    </div><br><br>
+
+    <!-- Disabled and readonly inputs (8.6.10)-->
+    <h2>Disabled and Readonly Inputs (8.6.10)</h2>
+    <input type="text" class="form-control" placeholder="Disabled input" disabled>
+    <br>
+    <input type="text" class="form-control" placeholder="Readonly input" readonly>
+    <br><br>
+    <!-- Exmpale Forms (8.6.11) -->
+    <h2> Exmaple Forms (8.6.11)</h2>
+    <div class="container mt-5">
+        <form>
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword" class="form-label">Passwords</label>
+                <input type="password" class="form-control" id="inputPassword">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck">
+                <label for="exmapleCheck" class="form-check-label">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
