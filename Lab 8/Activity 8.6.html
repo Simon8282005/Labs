@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <!-- 8.6.1 Basic form -->
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="exampleInputEmail" placeholder="name@example.com" required>
+        </div>  
+        <div class="mb-3">
+            <label for="exampleInputPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exmpaleInputPassword" placeholder="passwrod" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <!-- 8.6.2 -->
+    <br><br>
+    <h2>Form 8.6.2</h2>
+    <form>
+        <div class="row mb-3">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="emial" class="form-control" id="inputEmail">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form><br><br>
+
+    <!-- Inline form  -->
+    <h2>Form 8.6.3</h2>
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form><br><br>
+    
+    <!-- Form control -->
+    <h2>Textarea 8.6.4</h2>
+    <form class="mb-3">
+        <label for="exampleTextArea" class="form-label">Example Textare</label>
+        <textarea class="form-control" id="exampleTextArea" rows="3"></textarea>
+    </form>
+
+    <!-- Select Menu -->
+    <h2>Form 8.6.5</h2>
+    <div class="mb-3">
+        <label for="exampleSelect" class="form-label">Select Example</label>
+        <select class="form-select" id="exampleSelect">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+    </div>
+</body>
+</html>
